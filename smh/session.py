@@ -1803,7 +1803,7 @@ class Session(BaseSession):
         tab["stderr"].format = "5.2f"
         tab["[X/H]"].format = "5.2f"
         tab["[X/Fe]"].format = "5.2f"
-        tab.write(filepath, format="ascii.fixed_width_two_line")
+        tab.write(filepath, format="ascii.fixed_width_two_line", overwrite=True)
         return True #raise NotImplementedError
 
     def export_spectral_model_measurements(self, filepath):
